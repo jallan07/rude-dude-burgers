@@ -102,17 +102,17 @@ Having an active and healthy commit history on GitHub is important for your futu
 
    - [DONE] ~~Export the connection.~~
 
-3. Create an `orm.js` file inside `config` directory.
+3. [DONE] ~~Create an `orm.js` file inside `config` directory.~~
 
-   - Import (require) `connection.js` into `orm.js`
+   - [DONE] ~~Import (require) `connection.js` into `orm.js`~~
 
-   - In the `orm.js` file, create the methods that will execute the necessary MySQL commands in the controllers. These are the methods you will need to use in order to retrieve and store data in your database.
+   - [DONE] In the `orm.js` file, create the methods that will execute the necessary MySQL commands in the controllers. These are the methods you will need to use in order to retrieve and store data in your database.
 
-     - `selectAll()`
-     - `insertOne()`
-     - `updateOne()`
+     - [DONE] ~~`selectAll()`~~
+     - [DONE] ~~`insertOne()`~~
+     - [DONE] ~~`updateOne()`~~
 
-   - Export the ORM object in `module.exports`.
+   - [DONE] ~~Export the ORM object in `module.exports`.~~
 
 #### Model setup
 
