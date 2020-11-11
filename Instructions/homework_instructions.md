@@ -128,16 +128,16 @@ Having an active and healthy commit history on GitHub is important for your futu
 
 #### Controller setup
 
-1. Inside your `burger` directory, create a folder named `controllers`.
+1. [DONE] ~~Inside your `burger` directory, create a folder named `controllers`.~~
 
-2. In `controllers`, create the `burgers_controller.js` file.
+2. [DONE] ~~In `controllers`, create the `burgers_controller.js` file.~~
 
-3. Inside the `burgers_controller.js` file, import the following:
+3. [DONE] ~~Inside the `burgers_controller.js` file, import the following:~~
 
-   - Express
-   - `burger.js`
+   - [DONE] ~~Express~~
+   - [DONE] ~~`burger.js`~~
 
-4. Create the `router` for the app, and export the `router` at the end of your file.
+4. [DONE] ~~Create the `router` for the app, and export the `router` at the end of your file.~~
 
 #### View setup
 
