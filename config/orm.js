@@ -1,6 +1,6 @@
 // dependencies
 const { query } = require("express");
-const connection = require("./connection");
+const connection = require("./connection.js");
 
 // ORM methods for controllers
 const orm = {
