@@ -2,6 +2,16 @@
 const { query } = require("express");
 const connection = require("./connection.js");
 
+// The below helper function loops through and creates an array of question marks - ["?", "?", "?"] - and turns it into a string.
+// ["?", "?", "?"].toString() => "?,?,?";
+function printQuestionMarks(num) {
+	var arr = [];
+	for (var i = 0; i < num; i++) {
+		arr.push("?");
+	}
+	return arr.toString();
+}
+
 // ORM methods for controllers
 const orm = {
 	selectAll: function (table, cb) {
@@ -11,19 +21,21 @@ const orm = {
 			cb(data);
 		});
 	},
-	insertOne: function (table, col1, col2, burger_name, devoured_status) {
-		connection.query(
-			"INSERT INTO ?? (??, ??) VALUES (?, ?)",
-			[table, col1, col2, burger_name, devoured_status],
-			function (err, data) {
-				if (err) throw err;
-				// log rows that have been affected
-				let affected = data.affectedRows;
-				console.log({ affected });
-				// log in table format the full table of burgers in our database, including the one that was just added
-				console.log(orm.selectAll("burgers"));
+	insertOne: function (table, col1, val1, cb) {
+		var queryString = "INSERT INTO " + table;
+		queryString += " (";
+		queryString += col1.toString();
+		queryString += ") ";
+		queryString += "VALUES (";
+		queryString += printQuestionMarks(val1.length);
+		queryString += ") ";
+		console.log(queryString);
+		connection.query(queryString, val1, function (err, result) {
+			if (err) {
+				throw err;
 			}
-		);
+			cb(result);
+		});
 	},
 	updateOne: function () {},
 };

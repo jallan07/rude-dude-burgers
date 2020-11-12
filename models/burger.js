@@ -3,12 +3,16 @@ const orm = require("../config/orm.js");
 
 // create functions that will interact with the database
 const burger = {
-	select: function (cb) {
+	selectAll: function (cb) {
 		orm.selectAll("burgers", function (res) {
 			cb(res);
 		});
 	},
-	insert: function () {},
+	insertOne: function (col1, val1, cb) {
+		orm.insertOne("burgers", col1, val1, function (res) {
+			cb(res);
+		});
+	},
 	update: function () {},
 };
 
