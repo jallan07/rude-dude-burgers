@@ -2,6 +2,9 @@
 	{{burger_name}}
 
 	<button class="change-status btn btn-warning" data-id="{{id}}" data-newstatus="{{devoured}}">
-		{{#if devoured}}DEVOUR{{else}}DELETE{{/if}}
+		{{#if devoured}}
+		<img src="assets/img/open-mouth.png" alt="eat-icon">
+		<img src="assets/img/hamburger.png" alt="burger-icon">
+		{{else}}DELETE{{/if}}
 	</button>
 </li>
