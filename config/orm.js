@@ -4,10 +4,11 @@ const connection = require("./connection.js");
 
 // ORM methods for controllers
 const orm = {
-	selectAll: function (table) {
+	selectAll: function (table, cb) {
 		connection.query("SELECT * FROM ??", [table], function (err, data) {
 			if (err) throw err;
 			console.table(data);
+			cb(data);
 		});
 	},
 	insertOne: function (table, col1, col2, burger_name, devoured_status) {
