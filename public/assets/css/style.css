@@ -1,3 +1,4 @@
+/* General */
 html {
 	scroll-behavior: smooth;
 }
@@ -16,6 +17,22 @@ nav {
 .navbar-brand {
 	font-size: 36px;
 	font-weight: 600;
+}
+
+nav li {
+	font-size: 18px;
+	font-weight: 500;
+}
+
+/* Jumbotron */
+.jumbotron {
+	background-image: url("../img/burger-bg.jpg");
+	background-size: 850px;
+	background-position: center; /* Center the image */
+}
+.jumbo-container {
+	background-color: #ffffffd3;
+	border-radius: 10px;
 }
 
 .container {
