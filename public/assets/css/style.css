@@ -7,18 +7,15 @@ html {
 header {
 	background: #4583ec;
 }
-
 nav {
 	background: #4583ec;
 	width: 80%;
 	margin: 0 auto;
 }
-
 .navbar-brand {
 	font-size: 36px;
 	font-weight: 600;
 }
-
 nav li {
 	font-size: 18px;
 	font-weight: 500;
@@ -35,8 +32,17 @@ nav li {
 	border-radius: 10px;
 }
 
+/* Main Body */
 .container {
 	margin-top: 5%;
+}
+
+h4 {
+	padding-bottom: 15px;
+}
+
+.underline {
+	text-decoration: underline double #fdcc69;
 }
 
 li {
@@ -45,10 +51,10 @@ li {
 	/* background: #faebd7; */
 }
 
+/* Form */
 .label {
 	font-weight: bold;
 }
-
 .create-update-form {
 	padding: 5px;
 	margin: 5px;
