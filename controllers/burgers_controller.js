@@ -24,5 +24,16 @@ router.post("/api/burgers", function (req, res) {
 	});
 });
 
+router.put("/api/burgers/:id", function (req, res) {
+	let id = "id";
+	let idVal = req.params.id;
+	burger.updateOne("devoured", true, id, idVal, function (result) {
+		if (result.changedRows === 0) {
+			return res.status(404).end();
+		}
+		res.status(200).end();
+	});
+});
+
 // export the router
 module.exports = router;

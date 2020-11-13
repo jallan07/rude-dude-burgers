@@ -3,6 +3,10 @@ html {
 	scroll-behavior: smooth;
 }
 
+.lead {
+	color: rgba(0, 0, 0, 0.872);
+}
+
 /* Header & Main Nav */
 header {
 	background: #4583ec;

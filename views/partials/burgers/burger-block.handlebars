@@ -1,10 +1,19 @@
 <li>
 	{{burger_name}}
-
+	
+	{{!-- Burgers that HAVE NOT been annihilated --}}
+	{{#if devoured}}
 	<button class="change-status btn btn-warning" data-id="{{id}}" data-newstatus="{{devoured}}">
-		{{#if devoured}}
 		<img src="assets/img/open-mouth.png" alt="eat-icon">
 		<img src="assets/img/hamburger.png" alt="burger-icon">
-		{{else}}DELETE{{/if}}
 	</button>
+	{{/if}}
+
+	{{!-- Burgers that HAVE been annihilated --}}
+	{{#unless devoured}}
+	<button class="trash btn btn-warning" data-id="{{id}}" data-newstatus="{{trash}}">
+		<img src="assets/img/delete.png" alt="burger-icon">
+	</button>
+	{{/unless}}
+	
 </li>
