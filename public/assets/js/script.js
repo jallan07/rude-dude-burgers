@@ -32,4 +32,15 @@ $(document).ready(function () {
 			location.reload();
 		});
 	});
+
+	// Delete burger on trash button click
+	$(".trash").on("click", function () {
+		let id = $(this).data("id");
+		console.log(id);
+		$.ajax("/api/burgers/" + id, {
+			method: "DELETE",
+		}).then(function (data) {
+			console.log("deleted " + data);
+		});
+	});
 });

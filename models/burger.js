@@ -18,6 +18,11 @@ const burger = {
 			cb(res);
 		});
 	},
+	deleteOne: function (col1, val1, cb) {
+		orm.deleteOne("burgers", col1, val1, function (res) {
+			cb(res);
+		});
+	},
 };
 
 // export the database functions for the controller

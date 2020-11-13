@@ -35,5 +35,17 @@ router.put("/api/burgers/:id", function (req, res) {
 	});
 });
 
+router.delete("/api/burgers/:id", function (req, res) {
+	let col1 = "id";
+	let val1 = req.params.id;
+	console.log(val1);
+	burger.deleteOne(col1, val1, function (result) {
+		if (result.changedRows === 0) {
+			res.status(404).end();
+		}
+		res.status(200).end();
+	});
+});
+
 // export the router
 module.exports = router;

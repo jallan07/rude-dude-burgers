@@ -44,8 +44,15 @@ const orm = {
 			}
 		);
 	},
-	deleteOne: function (table, col1, val1) {
-		connection.query("DELETE FROM ?? WHERE ?? = ?");
+	deleteOne: function (table, col1, val1, cb) {
+		connection.query(
+			"DELETE FROM ?? WHERE ?? = ?",
+			[table, col1, val1],
+			function (err, result) {
+				if (err) throw err;
+				cb(result);
+			}
+		);
 	},
 };
 
