@@ -41,6 +41,7 @@ $(document).ready(function () {
 			method: "DELETE",
 		}).then(function (data) {
 			console.log("deleted " + data);
+			location.reload();
 		});
 	});
 });
