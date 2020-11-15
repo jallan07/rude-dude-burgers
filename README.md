@@ -10,13 +10,26 @@ The Rude Dude is a restaurant app that lets users input the names of burgers the
 
 ## **Table of Contents**
 
+1. [Technologies Utilized](#Technologies-Utilized)
 1. [Installation](#Installation)
-2. [Usage](#Usage)
-3. [License](#License)
-4. [Contributions](#Contributions)
-5. [Tests](#Tests)
-6. [Questions](#Questions)
-7. [Author](#Author)
+1. [Usage](#Usage)
+1. [License](#License)
+1. [Contributions](#Contributions)
+1. [Tests](#Tests)
+1. [Questions](#Questions)
+1. [Author](#Author)
+
+---
+
+## **Technologies Utilized**
+
+1. Javascript
+2. Handlebars
+3. Express
+4. MySQL
+5. Object Relational Mapper
+6. HTML
+7. CSS
 
 ---
 
